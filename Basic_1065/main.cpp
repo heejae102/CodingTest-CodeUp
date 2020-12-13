@@ -1,8 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-#include<iostream>
-#include<iomanip>
-using namespace std;
 
 /*
 
