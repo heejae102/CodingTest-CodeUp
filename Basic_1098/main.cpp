@@ -60,5 +60,31 @@ d = 0 or 1
 
 int main()
 {
+	int width, height, count, length, direction, x, y;
+	int arr[101][101] = { 0 };
+
+	scanf("%d %d", &height, &width);
+	scanf("%d", &count);
+
+	while (count--)
+	{
+		scanf("%d %d %d %d", &length, &direction, &x, &y);
+
+		for (int i = 0; i < length; i++)
+		{
+			if (direction == 1) arr[x + i][y] = 1; 
+			else arr[x][y + i] = 1; 
+		}
+	}
+
+	for (int i = 1; i <= height; i++)
+	{
+		for (int j = 1; j <= width; j++)
+		{
+			printf("%d ", arr[i][j]);
+		}
+		printf("\n");
+	}
+
 	return 0;
 }
